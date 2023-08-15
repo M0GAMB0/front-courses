@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;500;700;800&family=Poppins:ital,wght@0,400;1,500&display=swap');
+head,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.pth {
+  padding: 10px 0px;
+}
+.tabpath {
+  color: #000;
+  /* text-align: center; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  justify-content: flex-start;
+  /* padding: 50px 10px 8px 10px; */
+  margin-bottom: 0px;
+  padding-top: 8px;
+}
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+.courses {
+  margin-top: 0px;
+}
+.dropdown-toggle {
+  color: #212427;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.718px;
+}
+.course .dropdown-toggle:focus {
+  box-shadow: none; /* Remove the focus box-shadow */
+  outline: none; /*Remove the outline */
+  border-color: transparent !important; /*Set border color to transparent*/
+}
+.dropdown-toggle:hover {
+  cursor: pointer;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: transparent !important; /* Remove background color on hover and focus */
+  color: #333 !important; /* Change text color */
+}
+
+.dropdown-item {
+  color: #212427;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.718px; /* 212.27% */
+}
+.close:focus {
+  outline: none !important;
+  border: none !important;
+}
+.topClassifier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sortBtn .dropdown-toggle::after {
+  display: none !important;
+}
+.sortBtn .dropdown-toggle {
+  display: flex;
+  border-radius: 3px;
+  border: 0.5px solid #bac6d4;
+  background: #fff;
+  padding: 10px;
+}
+.sortBtn .dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: transparent !important; /* Remove background color on hover and focus */
+  color: #333 !important; /* Change text color */
+}
+.sortBtn .dropdown-menu {
+  padding: 0.5rem 0;
+  width: 170px;
+}
+.sortBtn p {
+  color: #0e2254;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px; /* 135.714% */
+  margin: 0px;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
