@@ -165,3 +165,6 @@ label {
 .category p:hover {
   color: #a4afb9;
 }
+.bg-gradient {
+  background: linear-gradient(135deg, #0065b4 0%, #009cf6 100%);
+}
