@@ -80,36 +80,130 @@
                 fill="#0E2254" />
             </svg>
           </button>
-          <div class="dropdown-menu" aria-labelledby="sort">
+          <div class="dropdown-menu container" aria-labelledby="sort">
             <div class="dropdown-item drop1">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="dropdown"
-                aria-label="Close">
+              <button type="button" class="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <p class="dropdown-item">Sort by</p>
+            <p class="dropdown-item" onclick="event.stopPropagation();">
+              Sort by
+            </p>
             <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="flexCheckDefault" />
-              <label class="form-check-label" for="flexCheckDefault">
+              <input type="checkbox" value="" id="latest-courses" />
+              <label
+                class="form-check-label"
+                for="latest-courses"
+                onclick="event.stopPropagation();">
                 Latest Courses
               </label>
             </div>
             <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="flexCheckDefault" />
-              <label class="form-check-label" for="flexCheckDefault">
-                Latest Courses
+              <input type="checkbox" value="" id="courses-by-owner" />
+              <label
+                class="form-check-label"
+                for="courses-by-owner"
+                onclick="event.stopPropagation();">
+                Courses By Owner
               </label>
             </div>
             <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="flexCheckDefault" />
-              <label class="form-check-label" for="flexCheckDefault">
-                Latest Courses
+              <input type="checkbox" value="" id="courses-by-codeblu" />
+              <label
+                class="form-check-label"
+                for="courses-by-codeblu"
+                onclick="event.stopPropagation();">
+                Courses By codeblu
               </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <input type="checkbox" value="" id="lectures-low-to-high" />
+              <label
+                class="form-check-label"
+                for="lectures-low-to-high"
+                onclick="event.stopPropagation();">
+                Lectures:Low to High
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <input type="checkbox" value="" id="lectures-high-to-low" />
+              <label
+                class="form-check-label"
+                for="lectures-high-to-low"
+                onclick="event.stopPropagation();">
+                Lectures:High to Low
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <input
+                type="checkbox"
+                value=""
+                id="Hours-of-content:Low-to-High" />
+              <label
+                class="form-check-label"
+                for="Hours-of-content:Low-to-High"
+                onclick="event.stopPropagation();">
+                Hours of content:Low to High
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <input
+                type="checkbox"
+                value=""
+                id="Hours-of-content:High-to-Low" />
+              <label
+                class="form-check-label"
+                for="Hours-of-content:High-to-Low"
+                onclick="event.stopPropagation();">
+                Hours of content:High to Low
+              </label>
+            </div>
+            <div class="dropdown-item">
+              <button type="button" class="btn form-control showr">
+                Show Results
+              </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="dropdown category">
+        <button
+          class="btn dropdown-toggle custom-dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          Select Category
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <!-- dropdown items here -->
+          <p class="dropdown-item" onclick="event.stopPropagation();">
+            Select Category
+          </p>
+          <a class="dropdown-item" href="#">Software Development</a>
+          <a class="dropdown-item" href="#">Marketing</a>
+          <a class="dropdown-item" href="#">Office Productivity</a>
+          <a class="dropdown-item" href="#">Data Analysis & Data Science</a>
+          <a class="dropdown-item" href="#">AI & Machine Learning</a>
+          <a class="dropdown-item" href="#">Personal Development</a>
+          <a class="dropdown-item" href="#">Business</a>
+          <a class="dropdown-item" href="#">Academics</a>
+          <a class="dropdown-item" href="#">Lifestyle, Hobbies & DIY</a>
+          <a class="dropdown-item" href="#">IT, Engineering & Technology</a>
+          <a class="dropdown-item" href="#">Design</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <div class="position-absolute bg-info text-white px-2 py-1 rounded-top">
+          Latest
+        </div>
+        <img
+          src="https://via.placeholder.com/286x180"
+          class="card-img-top"
+          alt="..." />
+        <div class="bg-primary text-white text-center py-2">by Saikumar</div>
+        <div class="card-body">
+          <p class="card-text">Content goes here...</p>
         </div>
       </div>
     </div>
