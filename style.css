@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;500;700;800&family=Poppins:ital,wght@0,500;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;500;700;800&family=Poppins:ital,wght@0,500;1,500&display=swap");
 head,
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 .pth {
@@ -17,7 +17,7 @@ body {
   font-weight: 500;
   line-height: normal;
   display: flex;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   justify-content: flex-start;
   margin-bottom: 0px;
   padding-top: 8px;
@@ -36,11 +36,55 @@ a {
   font-weight: 500;
   line-height: 29.718px;
 }
-.course .dropdown-toggle:focus {
-  box-shadow: none; /* Remove the focus box-shadow */
-  outline: none; /*Remove the outline */
-  border-color: transparent !important; /*Set border color to transparent*/
+.course {
+  margin-right: auto;
 }
+/* .course select{
+  appearance: none;
+} */
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M103.5 248.5l130.3 130.3c4.7 4.7 12.3 4.7 17 0l130.3-130.3c9.4-9.4 2.7-25.5-10.5-25.5H114c-13.2 0-19.9 16.1-10.5 25.5z"></path></svg>')
+    no-repeat right center;
+  background-size: 12px 12px;
+  padding-right: 50px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  transition-duration: 350ms;
+}
+.custom-select option {
+  padding: 8px 12px; /* Adjust padding as needed */
+  margin: 15px;
+}
+.custom-select option:hover {
+  background-color: transparent;
+  color: black;
+}
+.custom-select:focus {
+  box-shadow: none;
+}
+
+.custom-dropdown::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border: 2px solid red;
+  margin-left: 5px;
+  border-top: 5px solid #212529;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+.custom-select:hover {
+  background-position: calc(100% - 15px) center;
+  width: calc(100% + 100px);
+}
+
 .dropdown-toggle:hover {
   cursor: pointer;
 }
@@ -62,36 +106,36 @@ a {
 }
 .topClassifier {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-
-.sortBtn .dropdown-toggle::after {
-  display: none !important;
-}
-.sortBtn .dropdown-toggle {
-  display: flex;
-  border-radius: 3px;
+.sortBtn {
+  border-radius: 0.1875rem;
   border: 0.5px solid #bac6d4;
   background: #fff;
   padding: 10px;
+  cursor: pointer;
 }
-.sortBtn .dropdown-item:focus,
-.dropdown-item:hover {
-  background-color: transparent !important; /* Remove background color on hover and focus */
-}
-.sortBtn .dropdown-menu {
-  padding: 0.5rem 0;
-  min-width: 170px;
-  max-width: 260px;
+option {
+  border: 2px solid red;
 }
 .sortBtn p {
-  color: #212529;
-  font-size: 14px;
+  color: #0e2254;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 19px; /* 135.714% */
   margin: 0px;
+  line-height: 1.1875rem; /* 135.714% */
+}
+.modal-legend {
+  color: #0e2254;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0px;
+  line-height: 1.1875rem;
 }
 .form-check {
   display: flex;
@@ -115,56 +159,43 @@ label {
   background-color: #00a2fe;
 }
 .category {
-  margin-top: 1rem;
+  order: 1;
+  flex: 1 0 100%;
 }
-.custom-dropdown-toggle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #a4afb9;
-  font-size: 14px;
+.custom-select2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M103.5 248.5l130.3 130.3c4.7 4.7 12.3 4.7 17 0l130.3-130.3c9.4-9.4 2.7-25.5-10.5-25.5H114c-13.2 0-19.9 16.1-10.5 25.5z"></path></svg>')
+    no-repeat right center;
+  background-size: 12px 12px;
+  padding-right: 50px;
+  cursor: pointer;
   width: 100%;
-  padding: 0.7rem;
-  background-color: transparent;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 19px;
-  border-radius: 3px;
-  border: 0.5px solid #bac6d4;
 }
-.custom-dropdown-toggle::after {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: middle;
-  margin-left: 5px;
-  border-top: 5px solid #212529;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-}
-.category p {
-  color: #a4afb9;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 29.718px;
-  margin: 0px;
-}
-.category a {
-  color: #212529;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 29.718px;
-}
-.category .dropdown-menu {
-  min-width: 170px;
-  max-width: 320px;
-}
-.category p:hover {
-  color: #a4afb9;
+.form-control:focus {
+  box-shadow: none;
+  border-color: #bac6d4;
 }
 .bg-gradient {
   background: linear-gradient(135deg, #0065b4 0%, #009cf6 100%);
+}
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-select {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0; /* Add your hover background color */
 }

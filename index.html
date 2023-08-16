@@ -8,7 +8,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
@@ -20,12 +21,14 @@
           width="7"
           height="9"
           viewBox="0 0 7 9"
-          fill="none">
+          fill="none"
+        >
           <path
             d="M1 1L6 4.5L1 8"
             stroke="#212427"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round"
+          />
         </svg>
         Courses
       </div>
@@ -35,164 +38,195 @@
       style="width: 100%; height: 2px"
       preserveAspectRatio="xMidYMid slice"
       viewBox="0 0 100 2"
-      fill="none">
+      fill="none"
+    >
       <path d="M0 1H360" stroke="#DFEBF2" />
     </svg>
     <div class="container courses">
       <div class="topClassifier">
         <div class="dropdown course">
-          <button
-            class="dropdown-toggle border-0 bg-transparent"
-            type="button"
-            style="padding: 0px"
+          <select
+            class="custom-select custom-dropdown"
             id="nav"
-            data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false">
-            Courses
-          </button>
-          <div class="dropdown-menu" aria-labelledby="nav">
-            <a class="dropdown-item" href="#">Courses</a>
-            <a class="dropdown-item" href="#">Assesments</a>
-            <a class="dropdown-item" href="#">E-Books</a>
-            <a class="dropdown-item" href="#">Journeys</a>
-            <a class="dropdown-item" href="#">Live Trainings</a>
-          </div>
+            aria-expanded="false"
+          >
+            <!-- <option value="" selected disabled>Course</option> -->
+            <option value="courses" selected>Courses</option>
+            <option value="assessments">Assessments</option>
+            <option value="eBooks">E-Books</option>
+            <option value="journeys">Journeys</option>
+            <option value="liveTrainings">Live Trainings</option>
+          </select>
         </div>
-        <div class="dropdown sortBtn">
-          <button
-            class="dropdown-toggle dropdown-menu-right"
-            type="button"
-            id="sort"
-            data-toggle="dropdown"
-            data-boundary="viewport"
-            aria-haspopup="true"
-            aria-expanded="false">
-            <p>Sort by</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none">
-              <path
-                d="M6.66536 13.3327H3.33203L8.33203 18.3327V1.66602H6.66536V13.3327ZM11.6654 4.16602V18.3327H13.332V6.66602H16.6654L11.6654 1.66602V4.16602Z"
-                fill="#0E2254" />
-            </svg>
-          </button>
-          <div class="dropdown-menu container" aria-labelledby="sort">
-            <div class="dropdown-item drop1">
-              <button type="button" class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <p class="dropdown-item" onclick="event.stopPropagation();">
-              Sort by
-            </p>
-            <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="latest-courses" />
-              <label
-                class="form-check-label"
-                for="latest-courses"
-                onclick="event.stopPropagation();">
-                Latest Courses
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="courses-by-owner" />
-              <label
-                class="form-check-label"
-                for="courses-by-owner"
-                onclick="event.stopPropagation();">
-                Courses By Owner
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="courses-by-codeblu" />
-              <label
-                class="form-check-label"
-                for="courses-by-codeblu"
-                onclick="event.stopPropagation();">
-                Courses By codeblu
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="lectures-low-to-high" />
-              <label
-                class="form-check-label"
-                for="lectures-low-to-high"
-                onclick="event.stopPropagation();">
-                Lectures:Low to High
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <input type="checkbox" value="" id="lectures-high-to-low" />
-              <label
-                class="form-check-label"
-                for="lectures-high-to-low"
-                onclick="event.stopPropagation();">
-                Lectures:High to Low
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <input
-                type="checkbox"
-                value=""
-                id="Hours-of-content:Low-to-High" />
-              <label
-                class="form-check-label"
-                for="Hours-of-content:Low-to-High"
-                onclick="event.stopPropagation();">
-                Hours of content:Low to High
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <input
-                type="checkbox"
-                value=""
-                id="Hours-of-content:High-to-Low" />
-              <label
-                class="form-check-label"
-                for="Hours-of-content:High-to-Low"
-                onclick="event.stopPropagation();">
-                Hours of content:High to Low
-              </label>
-            </div>
-            <div class="dropdown-item">
-              <button type="button" class="btn form-control showr">
-                Show Results
-              </button>
+        <div class="category">
+          <select
+            class="form-control custom-select2 custom-dropdown2"
+            id="categorySelect"
+          >
+            <option value="" disabled selected>Select Category</option>
+            <option value="Software Development">Software Development</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Office Productivity">Office Productivity</option>
+            <option value="Data Analysis & Data Science">
+              Data Analysis & Data Science
+            </option>
+            <option value="AI & Machine Learning">AI & Machine Learning</option>
+            <option value="Personal Development">Personal Development</option>
+            <option value="Business">Business</option>
+            <option value="Academics">Academics</option>
+            <option value="Lifestyle, Hobbies & DIY">
+              Lifestyle, Hobbies & DIY
+            </option>
+            <option value="IT, Engineering & Technology">
+              IT, Engineering & Technology
+            </option>
+            <option value="Design">Design</option>
+          </select>
+        </div>
+
+        <!--Sort-->
+        <div
+          class="d-flex sortBtn"
+          data-toggle="modal"
+          data-target="#sortModal"
+        >
+          <p>Sort by</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M6.66536 13.3327H3.33203L8.33203 18.3327V1.66602H6.66536V13.3327ZM11.6654 4.16602V18.3327H13.332V6.66602H16.6654L11.6654 1.66602V4.16602Z"
+              fill="#0E2254"
+            />
+          </svg>
+        </div>
+
+        <div
+          class="modal fade"
+          id="sortModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="sortModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <!-- <div class="modal-header">
+                <h5 class="modal-title" id="sortModalLabel">Sort by</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div> -->
+              <div class="modal-body container">
+                <p class="modal-legend" onclick="event.stopPropagation();">
+                  Sort by
+                </p>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="latest-courses-modal"
+                  />
+                  <label class="form-check-label" for="latest-courses-modal"
+                    >Latest Courses</label
+                  >
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">Apply</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="dropdown category">
-        <button
-          class="btn dropdown-toggle custom-dropdown-toggle"
-          type="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Select Category
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <!-- dropdown items here -->
-          <p class="dropdown-item" onclick="event.stopPropagation();">
-            Select Category
-          </p>
-          <a class="dropdown-item" href="#">Software Development</a>
-          <a class="dropdown-item" href="#">Marketing</a>
-          <a class="dropdown-item" href="#">Office Productivity</a>
-          <a class="dropdown-item" href="#">Data Analysis & Data Science</a>
-          <a class="dropdown-item" href="#">AI & Machine Learning</a>
-          <a class="dropdown-item" href="#">Personal Development</a>
-          <a class="dropdown-item" href="#">Business</a>
-          <a class="dropdown-item" href="#">Academics</a>
-          <a class="dropdown-item" href="#">Lifestyle, Hobbies & DIY</a>
-          <a class="dropdown-item" href="#">IT, Engineering & Technology</a>
-          <a class="dropdown-item" href="#">Design</a>
-        </div>
-      </div>
+
       <div class="card" style="width: 18rem">
         <div class="position-absolute bg-info text-white px-2 py-1 rounded-top">
           Latest
@@ -200,7 +234,8 @@
         <img
           src="https://via.placeholder.com/286x180"
           class="card-img-top"
-          alt="..." />
+          alt="..."
+        />
         <div class="bg-gradient text-white text-center py-2">by Saikumar</div>
         <div class="card-body">
           <p class="card-text">Content goes here...</p>
@@ -211,14 +246,17 @@
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
